@@ -6,7 +6,7 @@ public class RectangleTest {
 
 	public static void main(String[] args) {
 		Rectangle rectangle = new Rectangle();
-		rectangle.setHeight(0);
+		rectangle.setHeight(10);
 		rectangle.setWidth(200);
 
 		int area = rectangle.calculateArea();

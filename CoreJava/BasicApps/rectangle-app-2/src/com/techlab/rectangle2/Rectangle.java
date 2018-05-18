@@ -5,12 +5,7 @@ public class Rectangle {
 	private int width;
 
 	public void setHeight(int height) {
-		if (height < 1)
-			this.height = 1;
-		else if (height > 100)
-			this.height = 100;
-		else
-			this.height = height;
+		this.height = checkRange(height);
 	}
 
 	public int getHeight() {
@@ -18,12 +13,8 @@ public class Rectangle {
 	}
 
 	public void setWidth(int width) {
-		if (width < 1)
-			this.width = 1;
-		else if (width > 100)
-			this.width = 100;
-		else
-			this.width = width;
+
+		this.width = checkRange(width);
 
 	}
 
@@ -33,6 +24,14 @@ public class Rectangle {
 
 	public int calculateArea() {
 		return height * width;
+	}
+
+	public int checkRange(int dimension) {
+		if (dimension < 1)
+			dimension = 1;
+		else if (dimension > 100)
+			dimension = 100;
+		return dimension;
 	}
 
 }
