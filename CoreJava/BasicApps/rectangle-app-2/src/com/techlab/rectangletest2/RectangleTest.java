@@ -6,8 +6,9 @@ public class RectangleTest {
 
 	public static void main(String[] args) {
 		Rectangle rectangle = new Rectangle();
-		rectangle.setHeight(5);
-		rectangle.setWidth(10);
+		rectangle.setHeight(0);
+		rectangle.setWidth(200);
+
 		int area = rectangle.calculateArea();
 		System.out.println("Area of rectangle is : " + area);
 

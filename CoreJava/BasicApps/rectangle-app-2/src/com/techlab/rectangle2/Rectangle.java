@@ -5,7 +5,12 @@ public class Rectangle {
 	private int width;
 
 	public void setHeight(int height) {
-		this.height = height;
+		if (height < 1)
+			this.height = 1;
+		else if (height > 100)
+			this.height = 100;
+		else
+			this.height = height;
 	}
 
 	public int getHeight() {
@@ -13,7 +18,12 @@ public class Rectangle {
 	}
 
 	public void setWidth(int width) {
-		this.width = width;
+		if (width < 1)
+			this.width = 1;
+		else if (width > 100)
+			this.width = 100;
+		else
+			this.width = width;
 
 	}
 
