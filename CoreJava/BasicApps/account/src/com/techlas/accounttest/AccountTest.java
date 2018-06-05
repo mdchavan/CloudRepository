@@ -8,13 +8,20 @@ public class AccountTest {
 		Account account1 = new Account("Sachin", 101, 20000);
 		Account account2 = new Account("Ram", 102, 10000);
 
-		account1.checkBalance();
+		int balance = account1.checkBalance();
+		System.out.println("Balance is : " + balance);
 		account1.deposit(10000);
+		System.out.println(" Deposit ammount in ");
 		account1.checkBalance();
 
-		account2.checkBalance();
+		int balance1 = account2.checkBalance();
+		System.out.println("Balance is : " + balance1);
 		account2.withdrawal(5000);
+		System.out.println(" Withdrawal ammount is  ");
 		account2.checkBalance();
+
+		Account account = account1.whoIsRich(account2);
+		System.out.println("Rich account balance of holder is : " + account.getName());
 
 	}
 

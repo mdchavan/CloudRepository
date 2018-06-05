@@ -11,21 +11,29 @@ public class Account {
 		this.balance = balance;
 	}
 
+	public String getName() {
+		return this.name;
+	}
+
 	public void deposit(int balance) {
 		this.balance += balance;
-		System.out.println(balance + " Deposit ammount in " + name);
 	}
 
 	public void withdrawal(int balance) {
 		this.balance -= balance;
-		System.out.println(" Withdrawal ammount is : " + balance + " from " + name);
+
 	}
 
-	public void checkBalance() {
-		if (balance <= 0)
-			System.out.println(name + " Your balance is low");
+	public int checkBalance() {
+		return balance;
+	}
+
+	public Account whoIsRich(Account account) {
+		if (balance > account.balance)
+			return this;
 		else
-			System.out.println(name + " Your balance is : " + balance);
+			return account;
+
 	}
 
 }
