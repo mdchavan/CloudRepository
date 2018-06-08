@@ -1,9 +1,9 @@
-package com.techlab.contact;
+package com.techlab.contact1;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Contact {
+public class Contact implements Serializable {
 	private String fname;
 	private String lname;
 	private String email;
@@ -43,22 +43,15 @@ public class Contact {
 		this.email = email;
 	}
 
-	public void add() {
+	public ArrayList<Contact> add() {
 		al = new ArrayList<Contact>();
 		al.add(this);
+		return al;
 	}
 
-	public void display() {
+	public ArrayList<Contact> display() {
 		// System.out.println(al.size());
-
-		Iterator it = al.iterator();
-
-		while (it.hasNext()) {
-			Contact con = (Contact) it.next();
-			System.out.println(" First name : " + con.getFname() + " , Last name : " + con.getLname() + "  , email : "
-					+ con.getEmail());
-
-		}
+		return al;
 	}
 
 }
