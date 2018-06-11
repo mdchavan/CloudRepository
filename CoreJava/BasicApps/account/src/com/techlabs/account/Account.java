@@ -15,12 +15,19 @@ public class Account {
 		return this.name;
 	}
 
+	public int getAccountNo() {
+		return this.accountno;
+	}
+
 	public void deposit(int balance) {
 		this.balance += balance;
 	}
 
-	public void withdrawal(int balance) {
-		this.balance -= balance;
+	public void withdrawal(int balance) throws InsufficientBalanceException {
+		if (this.balance < balance)
+			throw new InsufficientBalanceException(this);
+		else
+			this.balance = this.balance - balance;
 
 	}
 

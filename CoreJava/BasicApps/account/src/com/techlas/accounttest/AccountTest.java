@@ -16,12 +16,17 @@ public class AccountTest {
 
 		int balance1 = account2.checkBalance();
 		System.out.println("Balance is : " + balance1);
-		account2.withdrawal(5000);
-		System.out.println(" Withdrawal ammount is  ");
+		try {
+			account2.withdrawal(15000);
+		} catch (Exception e) {
+			System.out.println(" Exception: " + e.getMessage());
+		}
+		// System.out.println(" Withdrawal ammount is ");
 		account2.checkBalance();
 
 		Account account = account1.whoIsRich(account2);
-		System.out.println("Rich account balance of holder is : " + account.getName());
+		// System.out.println("Rich account balance of holder is : " +
+		// account.getName());
 
 	}
 
