@@ -1,10 +1,10 @@
 package com.techlabs.rtoproperties;
 
 public class RTO implements Comparable<RTO> {
-	private String state;
-	private int code;
+	public String state;
+	public String code;
 
-	public RTO(String state, int code) {
+	public RTO(String state, String code) {
 		this.state = state;
 		this.code = code;
 	}
@@ -17,22 +17,17 @@ public class RTO implements Comparable<RTO> {
 		this.state = state;
 	}
 
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
 
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 
 	@Override
 	public int compareTo(RTO rto) {
-		if (code == rto.code)
-			return 0;
-		else if (code > rto.code)
-			return 1;
-		else
-			return -1;
+		return code.compareTo(rto.code);
 	}
 
 }
