@@ -13,7 +13,7 @@ public class Student {
 		try {
 			validate(102);
 		} catch (Exception e) {
-			System.out.println("Exception occurred : " + e);
+			System.out.println("Exception occurred : " + e.getMessage());
 		}
 
 	}

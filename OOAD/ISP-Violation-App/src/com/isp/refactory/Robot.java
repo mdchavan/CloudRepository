@@ -1,6 +1,6 @@
 package com.isp.refactory;
 
-public class Robot implements IRobot{
+public class Robot implements IWork{
 
 	@Override
 	public void startWork() {

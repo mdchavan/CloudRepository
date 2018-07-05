@@ -1,6 +1,6 @@
 package com.isp.refactory;
 
-public class Man implements IRobot,IEat {
+public class Man implements IWorker {
 
 	@Override
 	public void startWork() {
@@ -21,5 +21,5 @@ public class Man implements IRobot,IEat {
 	public void stopEat() {
 		System.out.println("Man stop eat");
 	}
-
+	
 }

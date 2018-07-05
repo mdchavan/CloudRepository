@@ -14,6 +14,7 @@ public class HashMapDemoTest {
 		hashdemo.add(102, "Sunil");
 		hashdemo.add(105, "Ajit");
 		hashdemo.add(104, "Pravin");
+
 		System.out.println("Values added in hashmap");
 
 		hashmap = hashdemo.display();
